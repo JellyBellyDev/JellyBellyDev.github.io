@@ -1,0 +1,120 @@
+/**
+ * Custom theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #6d94d8;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #6d94d8;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+  &, h1, h2, h3, h4, h5, h6 {
+    color: #222;
+  }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*********************************************
+ * Custom style
+ *********************************************/
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.reveal .text-mute {
+  font-size: 0.5em;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  text-transform: none;
+}
+
+.reveal section {
+  img {
+    border: 0;
+    background-color: #222;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .my-name {
+    margin: 0;
+  }
+}
+
+.reveal a:hover img {
+  background: none;
+  box-shadow: none;
+}
+
+.reveal table {
+  width: 100%;
+  th, td {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .twitter-user {
+    img {
+      height: 15px;
+    }
+    span {
+      font-size: 0.5em;
+    }
+  }
+  td.list-modular-javascript {
+    text-align: left;
+    padding-left: 100px;
+  }
+}
+
+.reveal table.user-group td {
+  width: 33%;
+}
+
+.reveal li .list-option {
+  font-size: 0.7em;
+}
+
+.webpack2-is-coming h1 {
+  color: white;
+}
+
+ul.credit li {
+  font-size: 60%;
+}
