@@ -145,14 +145,18 @@ module.exports = ...;
                 <pre>
                     <code class="hljs">
 define(
-    'myModule',
+    'fooModule',
     ['lib/jQuery', 'lib/lodash'],
     function ($, _) {
         //...stuff
         return { ... }
     }
 });
-
+require(['lib/jQuery', 'fooModule'],
+    function ($, foo) {
+        //...stuff
+    }
+});
                     </code>
                 </pre>
             </section>
@@ -294,6 +298,11 @@ webpack( { /* configuration */ },
         </section>
 
         <section>
+            <h2>do you want to know more?</h2>
+            <img src="img/do-you-want-to-know-more.gif">
+        </section>
+
+        <section>
             <h2>let's go to the code</h2>
             <br/>
             <img src="img/go-code.gif">
@@ -320,7 +329,7 @@ webpack( { /* configuration */ },
             <table class="comparison">
                 <thead>
                 <tr>
-                    <th>Feature</th>
+                    <th>feature</th>
                     <th>webpack</th>
                     <th>requirejs</th>
                     <th>browserify</th>
@@ -330,28 +339,68 @@ webpack( { /* configuration */ },
                 </thead>
                 <tbody>
                 <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>commonjs `require`</td>
+                    <td><strong>yes</strong></td>
+                    <td>only wrapping in define</td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td>plugin</td>
                 </tr>
                 <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>amd `define`</td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td>plugin</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
                 </tr>
                 <tr>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
+                    <td>amd `require`</td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>amd `require` loads on demand</td>
+                    <td><strong>yes</strong></td>
+                    <td>manual configuration</td>
+                    <td>no</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>single bundle</td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                    <td><strong>yes</strong></td>
+                </tr>
+                <tr>
+                    <td>multiple bundles</td>
+                    <td><strong>yes</strong></td>
+                    <td>manual configuration</td>
+                    <td>manual configuration</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>common bundle</td>
+                    <td>manual configuration</td>
+                    <td><strong>yes</strong></td>
+                    <td>manual configuration</td>
+                    <td>no</td>
+                    <td>no</td>
+                </tr>
+                <tr>
+                    <td>watch mode</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                    <td><strong>yes</strong></td>
+                    <td>no</td>
+                    <td>no</td>
                 </tr>
                 </tbody>
             </table>
@@ -389,14 +438,17 @@ webpack( { /* configuration */ },
                 <li>allow commonjs, amd and es6</li>
                 <li>allow single and multiple entry point</li>
                 <li>common plugin for shared code between modules</li>
+                <li>minimize your code</li>
                 <li>support loader to pre-process files i.e. sass, less, jsx etc.</li>
                 <li>loaders +150</li>
                 <li>plugins +30</li>
+                <li>live reload with webpack-dev-server</li>
+                <li>friend of your task runner</li>
             </ul>
         </section>
 
         <section>
-            <h2>question?</h2>
+            <h2>questions?</h2>
 
             <img src="img/question.gif" height="350">
         </section>
@@ -408,9 +460,9 @@ webpack( { /* configuration */ },
         </section>
 
         <section>
-            <h2>credit</h2>
+            <h2>credits</h2>
 
-            <ul class="credit">
+            <ul class="credits">
                 <li>
                     <a href="http://webpack.github.io/docs">webpack docs</a>
                 </li>

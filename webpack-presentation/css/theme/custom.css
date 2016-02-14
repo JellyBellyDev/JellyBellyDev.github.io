@@ -338,8 +338,10 @@ body {
 .webpack2-is-coming h1 {
   color: white; }
 
-ul.credit li {
+ul.credits li {
   font-size: 60%; }
 
 .reveal table.comparison {
   font-size: 0.7em; }
+  .reveal table.comparison strong {
+    color: #6d94d8; }

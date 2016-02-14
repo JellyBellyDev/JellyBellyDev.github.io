@@ -115,10 +115,13 @@ section.has-light-background {
   color: white;
 }
 
-ul.credit li {
+ul.credits li {
   font-size: 60%;
 }
 
 .reveal table.comparison {
   font-size: 0.7em;
+  strong {
+    color: $headingColor;
+  }
 }
