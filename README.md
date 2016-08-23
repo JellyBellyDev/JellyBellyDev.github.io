@@ -1,11 +1,11 @@
 # JellyBellyDev.github.io
 
-## My GitHub pages
+### Speeches:
 
-### Slides:
+- Webpack: your final module bundler
+  * [Slide](http://jellybellydev.github.io/webpack-presentation/)
+  * [Video](https://www.youtube.com/watch?v=mkcyvJNBPUk)
 
-- [Webpack: your final module bundler](http://jellybellydev.github.io/webpack-presentation/)
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JellyBellyDev/jellybellydev.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+- Once upon a time, there were css, js and server-side rendering
+  * [Slide](http://www.slideshare.net/AndreaGiannantonio/once-upon-a-time-there-were-css-js-and-serverside-rendering-64616491)
+  * [Video](https://www.youtube.com/watch?v=Xr9TItuNxLg)
