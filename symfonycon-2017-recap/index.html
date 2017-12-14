@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>SymfonyCon 2017 Recap</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/symfonycon.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+
+<div id="hidden" style="display:none;">
+    <div id="header">
+        <div id="header-left"></div>
+        <div id="header-right"></div>
+        <div id="footer-left">
+            <img src="img/immo-labs.png"><a href="https://twitter.com/JellyBellyDev">@jellybellydev</a>
+        </div>
+    </div>
+</div>
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <img src="img/symfonycon-logo.jpg">
+        </section>
+        <section>
+            <h4>Agenda</h4>
+            <ul>
+                <li class="fragment">Symfony 4</li>
+                <li class="fragment">Dependency Injection Component v4.0</li>
+                <li class="fragment">Webpack Encore</li>
+                <li class="fragment">API Platform</li>
+                <li class="fragment">GraphQL</li>
+                <li class="fragment">Event Sourcing & CQRS</li>
+            </ul>
+        </section>
+        <section>
+            <img src="img/symfony-4.jpg">
+        </section>
+        <section>
+            <h4>Spoiler Alert</h4>
+            <iframe src="https://giphy.com/embed/l3vRnHL0u5jDQ2LUA" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            <p class="fragment">this is not a talk</p>
+        </section>
+        <section>
+            <img src="img/release-process.jpg">
+        </section>
+        <section>
+            <h4>Stuff</h4>
+            <ul>
+                <li class="fragment">New directory structure</li>
+                <li class="fragment">Micro by default</li>
+                <li class="fragment">Flex</li>
+                <li class="fragment">Silex is dead</li>
+                <li class="fragment">New DIC</li>
+                <li class="fragment">app_dev|app => index</li>
+                <li class="fragment">No more *Bundle</li>
+            </ul>
+        </section>
+        <section>
+            <iframe src="https://giphy.com/embed/U8bDgsXcnIEFy" width="668" height="376" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+
+<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    var header = $('#header').html();
+    if ( window.location.search.match( /print-pdf/gi ) ) {
+        $('.slides > section').prepend(header);
+    }
+    else {
+        $('.slides').prepend(header);
+    }
+</script>
+
+</body>
+</html>
