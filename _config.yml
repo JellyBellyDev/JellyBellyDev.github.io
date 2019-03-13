@@ -1,4 +1,5 @@
-gems: [jekyll-watch, jekyll-assets]
+exclude: [.idea]
+plugins: [jekyll-watch, jekyll-assets]
 
 title: Andrea Giannantonio - Resume
 url: ''
