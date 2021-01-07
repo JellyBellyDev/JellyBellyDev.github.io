@@ -24,6 +24,6 @@ indent_style = space
 indent_size = 2
 
 # Matches the exact files either package.json or .travis.yml
-[{README.md,package.json,.travis.yml}]
+[{README.md,package.json,*.yml}]
 indent_style = space
 indent_size = 2
